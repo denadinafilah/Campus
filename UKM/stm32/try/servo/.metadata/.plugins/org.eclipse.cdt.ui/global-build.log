@@ -1,0 +1,28 @@
+03:59:24 **** Incremental Build of configuration Debug for project Projek Servo ****
+make -j16 all 
+arm-none-eabi-size   Projek\ Servo.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7792	     20	   1644	   9456	   24f0	Projek Servo.elf
+Finished building: default.size.stdout
+ 
+03:59:30 **** Incremental Build of configuration Debug for project Projek Servo ****
+make -j16 all 
+arm-none-eabi-size   Projek\ Servo.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7792	     20	   1644	   9456	   24f0	Projek Servo.elf
+Finished building: default.size.stdout
+ 
+04:00:00 **** Incremental Build of configuration Debug for project Projek Servo ****
+make -j16 all 
+arm-none-eabi-size   Projek\ Servo.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7792	     20	   1644	   9456	   24f0	Projek Servo.elf
+Finished building: default.size.stdout
+ 
+04:00:47 **** Incremental Build of configuration Debug for project Projek Servo ****
+make -j16 all 
+arm-none-eabi-size   Projek\ Servo.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7792	     20	   1644	   9456	   24f0	Projek Servo.elf
+Finished building: default.size.stdout
+ 

@@ -1,0 +1,67 @@
+format baru
+# Save the following to common.in:
+
+# Konfigurasi interaksi Coulomb untuk struktur 2D (Slab dengan arah z)
+coulomb-interaction Slab 001
+coulomb-truncation-embed 0 0 0
+
+# Definisi kisi untuk graphene
+lattice Hexagonal 2.46 20.0  # Parameter kisi a=2.46 dan c cukup besar untuk memastikan pemisahan antar lapisan
+
+# Posisi atom untuk graphene (koordinat dalam satuan kisi)
+ion C  0.000000  0.000000  0.0   0
+ion C  0.333333  0.666667  0.0   0
+
+# Pseudopotensial dan parameter pemotongan energi
+ion-species /home/dena/jdftx/build/pseudopotentials/GBRV/c_pbe.uspp
+elec-cutoff 20 100
+
+format lama
+# Save the following to common.in:
+lattice Hexagonal 2.46 20.0
+ion-species /home/dena/jdftx/build/pseudopotentials/GBRV/c_pbe.uspp
+elec-cutoff 20 100
+
+# Posisi atom untuk graphene
+ion C 0.000 0.000 0.000  0
+ion C 0.500 0.500 0.000  0
+
+ion-width 0.2
+
+editing
+
+#Save the following to totalE.in:
+include common.in
+kpoint-folding 9 9 1               #Need k-points only in periodic directions
+elec-smearing Fermi 0.01
+dump-name totalE.$VAR
+dump End ElecDensity
+
+
+#Save the following to bandstruct.in:
+include common.in
+include bandstruct.kpoints
+fix-electron-density totalE.$VAR
+elec-n-bands 8
+dump-name bandstruct.$VAR
+dump End BandEigs
+
+
+#Save the following to bandstruct.kpoints.in:
+kpoint 0.0000000000     0.0000000000     0.0000000000     20  ! Gamma
+kpoint 0.3333333333     0.3333333333     0.0000000000     10  ! K
+kpoint 0.0000000000     0.5000000000     0.0000000000     17  ! M
+kpoint 0.0000000000     0.0000000000     0.0000000000     0   ! Gamma
+
+#Save the following to totalE.in:
+
+include common.in
+kpoint-folding 9 9 1    #Use a Brillouin zone mesh
+electronic-SCF          #Perform a Self-Consistent Field optimization
+dump-name totalE.$VAR
+dump End State BandEigs #State and band eigenvalues
+dump End ElecDensity    #Save the self-consistent electron density
+dump End EigStats       #Get eigenvalue statistics
+
+/home/dena/jdftx/jdftx-1.7.0
+

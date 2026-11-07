@@ -1,0 +1,77 @@
+21:47:43 **** Incremental Build of configuration Debug for project Belajar ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "Belajar.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Kuliah\KOMPOR\stm32\Belajar\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Belajar.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: Belajar.elf
+ 
+arm-none-eabi-size   Belajar.elf 
+arm-none-eabi-objdump -h -S  Belajar.elf  > "Belajar.list"
+   text	   data	    bss	    dec	    hex	filename
+   4624	     20	   1572	   6216	   1848	Belajar.elf
+Finished building: default.size.stdout
+ 
+Finished building: Belajar.list
+ 
+22:10:14 **** Incremental Build of configuration Debug for project Belajar ****
+make -j16 all 
+arm-none-eabi-size   Belajar.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4624	     20	   1572	   6216	   1848	Belajar.elf
+Finished building: default.size.stdout
+ 
+22:10:59 **** Incremental Build of configuration Debug for project Belajar ****
+make -j16 all 
+arm-none-eabi-size   Belajar.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4624	     20	   1572	   6216	   1848	Belajar.elf
+Finished building: default.size.stdout
+ 
+22:11:27 **** Incremental Build of configuration Debug for project Belajar ****
+make -j16 all 
+arm-none-eabi-size   Belajar.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4624	     20	   1572	   6216	   1848	Belajar.elf
+Finished building: default.size.stdout
+ 
+22:12:10 **** Incremental Build of configuration Debug for project Belajar ****
+make -j16 all 
+arm-none-eabi-size   Belajar.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4624	     20	   1572	   6216	   1848	Belajar.elf
+Finished building: default.size.stdout
+ 
+22:12:29 **** Incremental Build of configuration Debug for project Belajar ****
+make -j16 all 
+arm-none-eabi-size   Belajar.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4624	     20	   1572	   6216	   1848	Belajar.elf
+Finished building: default.size.stdout
+ 
+22:13:13 **** Incremental Build of configuration Debug for project Belajar ****
+make -j16 all 
+arm-none-eabi-size   Belajar.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4624	     20	   1572	   6216	   1848	Belajar.elf
+Finished building: default.size.stdout
+ 
+22:14:55 **** Incremental Build of configuration Debug for project Belajar ****
+make -j16 all 
+arm-none-eabi-size   Belajar.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4624	     20	   1572	   6216	   1848	Belajar.elf
+Finished building: default.size.stdout
+ 
+22:15:33 **** Incremental Build of configuration Debug for project Belajar ****
+make -j16 all 
+arm-none-eabi-size   Belajar.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4624	     20	   1572	   6216	   1848	Belajar.elf
+Finished building: default.size.stdout
+ 
+22:17:05 **** Incremental Build of configuration Debug for project Belajar ****
+make -j16 all 
+arm-none-eabi-size   Belajar.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4624	     20	   1572	   6216	   1848	Belajar.elf
+Finished building: default.size.stdout
+ 

@@ -1,0 +1,10 @@
+22:17:05 **** Incremental Build of configuration Debug for project Belajar ****
+make -j16 all 
+arm-none-eabi-size   Belajar.elf 
+   text	   data	    bss	    dec	    hex	filename
+   4624	     20	   1572	   6216	   1848	Belajar.elf
+Finished building: default.size.stdout
+ 
+
+22:17:05 Build Finished. 0 errors, 0 warnings. (took 184ms)
+
